@@ -22,6 +22,19 @@ setInterval(() => {
 
 
 
+const btnExample = document.querySelector('.btn-send-example');
+const inputExample = document.querySelector('.input-example');
+const textExample = 'Как ты высылаешь сообщения ботов?'.split('');
+
+inputExample.addEventListener('input', () => {
+  const valLength = inputExample.value.length;
+  if (valLength <= textExample.length) {
+    inputExample.value = textExample.slice(0, valLength).join('');
+  } else {
+    inputExample.value = textExample.join('');
+  }
+});
+
 // let data;
 
 // async function loadData() {
