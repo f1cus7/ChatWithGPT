@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/letterizejs@2.0.0/lib/letterize.min.js"></script>
     <script src="scripts/animate-text.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
     <header class="scroll-reveal">ChatWithGPT</header>
@@ -91,16 +92,27 @@
             padding-bottom: 3vh;
           "
         >
-          <div class="scroll-reveal contents" style="color: white; margin-top: 5vh;">
+          <div
+            class="scroll-reveal contents"
+            style="color: white; margin-top: 5vh"
+          >
             Ход работ
           </div>
-          <img src="images/work.png" alt="" style="border-radius: 1vw" />
+          <img src="images/work.png" alt="" style="border-radius: 1vw" width="90%" />
         </div>
         <!-- участие нейросетей -->
         <div class="scroll-reveal contents">Участие нейросетей</div>
         <div class="chat-section-example">
           <p class="text-chatgpt">ChatGPT</p>
-          <div class="answer-example"></div>
+          <div class="answer-example">
+            <div class="msg-from-bot">
+                <img src="images/chatgpt.png" alt="" class="img-chat">
+                <div class="typed-there">
+  <pre><code id="json-typed"></code></pre>
+</div>
+            </div>
+            <div class="msg-to-bot">Как ты высылаешь сообщения ботов?</div>
+          </div>
           <div class="write-msg-example">
             <input
               type="text"
@@ -123,26 +135,30 @@
             </button>
           </div>
         </div>
-        
       </div>
     </main>
     <!-- автор -->
-     <footer>
-  <div class="row">
-    <a href="https://github.com/f1cus7" target="_blank">f1cus</a>
-    <a href="https://github.com/f1cus7" target="_blank">
-      <img src="images/github.svg" alt="" style="width: 2vw;">
-    </a>
-  </div>
-  <div class="row">
-    <a href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74" target="_blank">
-      плэйлист, сопровождающий разработку
-    </a>
-    <a href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74" target="_blank">
-      <img src="images/spotify.svg" alt="" style="width: 2vw;">
-    </a>
-  </div>
-</footer>
-
+    <footer>
+      <div class="row">
+        <a href="https://github.com/f1cus7" target="_blank">f1cus</a>
+        <a href="https://github.com/f1cus7" target="_blank">
+          <img src="images/github.svg" alt="" style="width: 2vw" />
+        </a>
+      </div>
+      <div class="row">
+        <a
+          href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74"
+          target="_blank"
+        >
+          плэйлист, сопровождающий разработку
+        </a>
+        <a
+          href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74"
+          target="_blank"
+        >
+          <img src="images/spotify.svg" alt="" style="width: 2vw" />
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
