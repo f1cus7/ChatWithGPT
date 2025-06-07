@@ -46,8 +46,8 @@ btnExample.addEventListener("click", () => {
     strings: [
       `{
     "name": "Ray",
-    "img": "ray.png",
-    "textId": 0,
+    "img": "ray.jpg",
+    "textLength": 10000,
     "text": "Выпусти меня"
 }`
     ],
@@ -59,21 +59,3 @@ btnExample.addEventListener("click", () => {
       
   }
 });
-
-
-
-// let data;
-
-// async function loadData() {
-//   const res = await fetch("scripts/db.json");
-//   const jsonStr = await res.text();
-//   data = JSON.parse(jsonStr);
-//   for (let i = 0; i < data.length; i++) {
-//     const rand = Math.random() * 0.5 + 1;
-//     const interval = Math.round(data[i].text.length * rand * 100);
-//     await new Promise(resolve => setTimeout(resolve, interval));
-//     console.log(data[i].text, interval);
-//   }
-// }
-
-// loadData();

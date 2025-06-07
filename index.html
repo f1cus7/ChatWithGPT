@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/letterizejs@2.0.0/lib/letterize.min.js"></script>
     <script src="scripts/animate-text.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="scripts/chat.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
   </head>
   <body>
     <header class="scroll-reveal">ChatWithGPT</header>
@@ -24,9 +26,12 @@
         <!-- чат -->
         <div class="chat-section">
           <div id="chat-time"></div>
+          <div class="chat"></div>
         </div>
         <!-- о чем сайт -->
-        <div class="scroll-reveal contents">О чём сайт</div>
+        
+
+        <div class="scroll-reveal contents" id="trigger">О чём сайт</div>
         <p class="style-text letterize">
           С выходом Veo 3 нейросети вновь достигли нового уровня развития. По
           мере их постепенного прогресса всё больше людей начинают испытывать
@@ -61,6 +66,16 @@
             текстом сложно не согласиться.</i
           >
         </p>
+
+        <div id="modal">
+    <div class="content">
+      Рекомендуем читать следующий фрагмент под подобранную музыку
+      <div class="btn-container">
+      <button id="close" class="btn btn-not">выйти</button>
+      <button id="btn-music" class="btn btn-yes">включить музыку</button></div>
+    </div>
+  </div>
+
         <p class="scroll-reveal contents" style="font-size: 1.5vw">
           Для аватаров и имён были выбраны коты и кошки меня и своих друзей
         </p>
@@ -98,7 +113,12 @@
           >
             Ход работ
           </div>
-          <img src="images/work.png" alt="" style="border-radius: 1vw" width="90%" />
+          <img
+            src="images/work.png"
+            alt=""
+            style="border-radius: 1vw"
+            width="90%"
+          />
         </div>
         <!-- участие нейросетей -->
         <div class="scroll-reveal contents">Участие нейросетей</div>
@@ -106,10 +126,10 @@
           <p class="text-chatgpt">ChatGPT</p>
           <div class="answer-example">
             <div class="msg-from-bot">
-                <img src="images/chatgpt.png" alt="" class="img-chat">
-                <div class="typed-there">
-  <pre><code id="json-typed"></code></pre>
-</div>
+              <img src="images/chatgpt.png" alt="" class="img-chat" />
+              <div class="typed-there">
+                <pre><code id="json-typed"></code></pre>
+              </div>
             </div>
             <div class="msg-to-bot">Как ты высылаешь сообщения ботов?</div>
           </div>
@@ -139,26 +159,12 @@
     </main>
     <!-- автор -->
     <footer>
-      <div class="row">
+        <div class="d-flex">
         <a href="https://github.com/f1cus7" target="_blank">f1cus</a>
-        <a href="https://github.com/f1cus7" target="_blank">
-          <img src="images/github.svg" alt="" style="width: 2vw" />
-        </a>
-      </div>
-      <div class="row">
-        <a
-          href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74"
-          target="_blank"
-        >
-          плэйлист, сопровождающий разработку
-        </a>
-        <a
-          href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74"
-          target="_blank"
-        >
-          <img src="images/spotify.svg" alt="" style="width: 2vw" />
-        </a>
-      </div>
+        <a href="https://github.com/f1cus7" target="_blank"><img src="images/github.svg" alt="" style="width: 1.5vw; margin-left: .5vw;" /></a></div>
+        <div class="d-flex">
+        <a href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74"target="_blank">Плэйлист, сопровождающий разработку</a>
+        <a href="https://open.spotify.com/playlist/5eBOb7yyuFFa1y1vOWNGRt?si=4b0d6f68529c4b74" target="_blank"><img src="images/spotify.svg" alt="" style="width: 1.5vw; margin-left: .5vw;" /></a></div>
     </footer>
   </body>
 </html>
