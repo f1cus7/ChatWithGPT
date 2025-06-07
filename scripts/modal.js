@@ -3,6 +3,7 @@ const closeBtn = document.getElementById("close");
 const target = document.getElementById("trigger");
 const btnMusic = document.getElementById("btn-music");
 let shown = false;
+const audio = new Audio("/audio/music.mp3");
 
 function disableScroll() {
   document.body.style.overflow = "hidden";
@@ -19,6 +20,12 @@ window.addEventListener("scroll", () => {
     modal.classList.add("show");
     disableScroll();
     shown = true;
+    document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+    modal.classList.remove("show");
+  enableScroll();
+    }
+});
   }
 });
 
@@ -30,5 +37,5 @@ closeBtn.addEventListener("click", () => {
 btnMusic.addEventListener("click", () => {
   modal.classList.remove("show");
   enableScroll();
-  new Audio("/audio/music.mp3").play();
+  audio.play();
 })
